@@ -1,0 +1,16 @@
+h1{
+background-color:red;
+color:gold;
+font-size: 50px;
+text-align: center;
+}
+
+.h1-1{
+display:inline-block;
+}
+
+body{
+background-color: deepskyblue;
+background-repeat: no-repeat;
+background-size:cover;
+}
