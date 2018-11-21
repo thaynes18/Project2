@@ -1,6 +1,6 @@
 h1{
 background-color:red;
-color:orange;
+color:Gold;
 font-size: 65px;
 height: 100px;
 text-align: center;
@@ -8,18 +8,65 @@ background-size:100%;
 margin-bottom: 0%;
 }
 
+#mainTitle{
+  width:400px;
+  height:150px;
+  margin-left:33%;
+
+}
+
+
+
+img{
+float: none;
+width: 205px;
+height:250px;
+margin-left: 12%;
+
+}
+
 .h1-1{
 display:inline-block;
 }
 
-.topnav{
-  background-color:orange;
+
+/* #mainNav { */
+/* grid-auto-columns: 20%; */
+/* grid-column: */
+
+/* } */
+
+
+.rightNav{
+  /* left: 100px; */
+  background-color:Red;
+  background-position: center;
   color:black;
   font-size: 45px;
   height: 50px;
-  margin-left: 0%;
   font-style: normal;
 }
+
+.centerNav{
+  /* margin-left: 50%; */
+  background-color:Red;
+  background-repeat: repeat-x;
+  color:black;
+  font-size: 45px;
+  height: 50px;
+  font-style: normal;
+}
+
+.leftNav{
+  /* margin-left: 20%; */
+  background-color:Red;
+  background-repeat: repeat-x;
+  color:black;
+  font-size: 45px;
+  height: 50px;
+  font-style: normal;
+}
+
 
 body{
 background-color: deepskyblue;
@@ -27,8 +74,10 @@ background-repeat: no-repeat;
 background-size:cover;
 }
 
-p{
+/* p{
+  width: 70px;
+  margin-left: 15%;
   background-color:black;
   color:yellow;
   font-style: oblique;
-}
+} */
