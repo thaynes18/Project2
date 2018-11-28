@@ -1,3 +1,20 @@
+body{
+background-color: black;
+background-repeat: no-repeat;
+background-size:cover;
+}
+
+#mainTitle{
+margin-left: 36%;
+width:330px;
+height:150px;
+}
+
+
+.h1-1{
+display:inline-block;
+}
+
 h1{
 background-color:red;
 color:Gold;
@@ -6,78 +23,47 @@ height: 100px;
 text-align: center;
 background-size:100%;
 margin-bottom: 0%;
+text-decoration: underline;
 }
 
-#mainTitle{
-  width:400px;
-  height:150px;
-  margin-left:33%;
+.Trainer{
+  margin-left: 70%;
+  height: 50px;
+  width: 50px;
+}
+
+.mainNav{
+  background-color: red;
+  font-size: 45px;
+  margin:auto;
+
 
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    overflow: hidden;
+    margin: auto;
+  }
 
+li{
+float: left;
+margin: auto;
+}
+
+li a {
+    display: inline-block;
+    padding: 34px 36px;
+    text-decoration: none;
+    color:black;
+  }
 
 img{
 float: none;
 width: 205px;
 height:250px;
 margin-left: 12%;
-
 }
-
-.h1-1{
-display:inline-block;
-}
-
-
-/* #mainNav { */
-/* grid-auto-columns: 20%; */
-/* grid-column: */
-
-/* } */
-
-
-.rightNav{
-  /* left: 100px; */
-  background-color:Red;
-  background-position: center;
-  color:black;
-  font-size: 45px;
-  height: 50px;
-  font-style: normal;
-}
-
-.centerNav{
-  /* margin-left: 50%; */
-  background-color:Red;
-  background-repeat: repeat-x;
-  color:black;
-  font-size: 45px;
-  height: 50px;
-  font-style: normal;
-}
-
-.leftNav{
-  /* margin-left: 20%; */
-  background-color:Red;
-  background-repeat: repeat-x;
-  color:black;
-  font-size: 45px;
-  height: 50px;
-  font-style: normal;
-}
-
-
-body{
-background-color: deepskyblue;
-background-repeat: no-repeat;
-background-size:cover;
-}
-
-/* p{
-  width: 70px;
-  margin-left: 15%;
-  background-color:black;
-  color:yellow;
-  font-style: oblique;
-} */

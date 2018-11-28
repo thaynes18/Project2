@@ -64,7 +64,7 @@ class Pokemon {
 
 
 
-    let Lapras= new Pokemon (abilities, defense, attack,hp);
+    let Lapras= new Pokemon ("Lapras", abilities, defense, attack,hp);
     console.log(Lapras);
     Lapras.display();
 });
@@ -73,7 +73,7 @@ class Pokemon {
 
 
 axios.get
-  ('http://fizal.me/pokeapi/api/v2/name/Bellossom.json')
+  ('http://fizal.me/pokeapi/api/v2/name/bellossom.json')
     .then(function(response){
   // console.log(response.data);
 
@@ -97,7 +97,37 @@ axios.get
 
 
 
-  let Bellossom= new Pokemon (abilities, defense, attack,hp);
+  let Bellossom= new Pokemon ("Bellossom", abilities, defense, attack,hp);
   console.log(Bellossom);
   Bellossom.display();
   });
+
+
+
+  axios.get
+    ('http://fizal.me/pokeapi/api/v2/name/luxio.json')
+      .then(function(response){
+    // console.log(response.data);
+
+    // All the abilities
+    let abilities= response.data.abilities[0].ability.name;
+    console.log(response.data.abilities[0].ability.name);
+    // console.log(response.data.abilities[1].ability.name);
+    // console.log(response.data.abilities[2].ability.name);
+
+    // The defense
+    let defense= response.data.stats[3].base_stat;
+    console.log(response.data.stats[3].base_stat);
+
+    // Attack
+    let attack= response.data.stats[4].base_stat;
+    console.log(response.data.stats[4].base_stat);
+
+    // hp
+    let hp = response.data.stats[5].base_stat;
+    console.log(response.data.stats[5].base_stat);
+
+    let Luxio= new Pokemon ("Luxio", abilities, defense, attack,hp);
+    console.log(Luxio);
+    Luxio.display();
+    });
