@@ -1,4 +1,5 @@
 class Pokemon {
+
   constructor(nameAbilities,defenseNum,attackNum,hpNum){
     this.nameAbilities = nameAbilities;
     this.defenseNum = defenseNum;
@@ -11,12 +12,13 @@ class Pokemon {
     this.element = document.getElementById('test');
     this.element.className = 'product';
 
-  }
+}
 
-  display(){
-    let abilities = document.querySelector('p');
-    abilities.innerHTML = this.nameAbilities;
-    this.element.appendChild(abilities);
+display(){
+  let abilities = document.querySelector('p');
+  abilities.innerHTML = this.nameAbilities;
+  this.element.appendChild(abilities);
+
 
    let defense = document.querySelector('p');
   defense.innerHTML = this.defenseNum;
@@ -29,17 +31,9 @@ class Pokemon {
    let hp = document.querySelector('p');
   hp.innerHTML = this.hpNum;
    this.element.appendChild(hp);
-
-   this.container.appendChild(this.element);
-
-
-
-  }
+ }
 }
-
-
-
-  axios.get
+ axios.get
     ('http://fizal.me/pokeapi/api/v2/name/lapras.json')
       .then(function(response){
     // console.log(response.data);
@@ -62,14 +56,11 @@ class Pokemon {
     let hp = response.data.stats[5].base_stat;
     console.log(response.data.stats[5].base_stat);
 
-
-
     let Lapras= new Pokemon ("Lapras", abilities, defense, attack,hp);
     console.log(Lapras);
     Lapras.display();
+
 });
-
-
 
 
 axios.get
@@ -95,14 +86,11 @@ axios.get
   let hp = response.data.stats[5].base_stat;
   console.log(response.data.stats[5].base_stat);
 
+  let Lapras= new Pokemon ("Lapras", abilities, defense, attack,hp);
+  console.log(Lapras);
+  Lapras.display();
 
-
-  let Bellossom= new Pokemon ("Bellossom", abilities, defense, attack,hp);
-  console.log(Bellossom);
-  Bellossom.display();
-  });
-
-
+});
 
   axios.get
     ('http://fizal.me/pokeapi/api/v2/name/luxio.json')
@@ -129,5 +117,5 @@ axios.get
 
     let Luxio= new Pokemon ("Luxio", abilities, defense, attack,hp);
     console.log(Luxio);
-    Luxio.display();
-    });
+     Luxio.display();
+   });
