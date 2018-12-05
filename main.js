@@ -1,39 +1,28 @@
 class Pokemon {
-
-  constructor(nameAbilities,defenseNum,attackNum,hpNum){
+  constructor(nameAbilities,defenseNum,attackNum,hpNum, pokemonNumber){
     this.nameAbilities = nameAbilities;
     this.defenseNum = defenseNum;
     this.attackNum = attackNum;
     this.hpNum = hpNum;
+    this.pokemonNumber = pokemonNumber;
 
     //Where to put product
     this.container = document.getElementById('products');
     //make a div with classname product
     this.element = document.getElementById('test');
-    this.element.className = 'product';
+    // this.element.className = 'product';
+  }
 
-}
-
-display(){
-  let abilities = document.querySelector('p');
-  abilities.innerHTML = this.nameAbilities;
-  this.element.appendChild(abilities);
-
-
-   let defense = document.querySelector('p');
-  defense.innerHTML = this.defenseNum;
-   this.element.appendChild(defense);
-
-   let attack = document.querySelector('p');
-  attack.innerHTML = this.attackNum;
-   this.element.appendChild(attack);
-
-   let hp = document.querySelector('p');
-  hp.innerHTML = this.hpNum;
-   this.element.appendChild(hp);
+  display(){
+    // console.log("Abilities"+this.pokemonNumber)
+    document.getElementById("Abilities"+this.pokemonNumber).innerHTML = "Abilities: " + this.nameAbilities;
+    document.getElementById("Defense"+this.pokemonNumber).innerHTML = "Defense: " + this.defenseNum;
+    document.getElementById("Attack"+this.pokemonNumber).innerHTML = "Attack: " + this.attackNum;
+    document.getElementById("Hp"+this.pokemonNumber).innerHTML = "Hp: " + this.hpNum;
+   }
  }
-}
- axios.get
+
+axios.get
     ('http://fizal.me/pokeapi/api/v2/name/lapras.json')
       .then(function(response){
     // console.log(response.data);
@@ -56,11 +45,12 @@ display(){
     let hp = response.data.stats[5].base_stat;
     console.log(response.data.stats[5].base_stat);
 
-    let Lapras= new Pokemon ("Lapras", abilities, defense, attack,hp);
+    let Lapras= new Pokemon(abilities, defense, attack,hp, 1);
     console.log(Lapras);
-    Lapras.display();
-
-});
+    let laprasButton = document.getElementById('laprasButton');
+    laprasButton.addEventListener('click', Lapras.display.bind(Lapras));
+    // taneeya.pokemon.push(Lapras)
+  });
 
 
 axios.get
@@ -86,10 +76,10 @@ axios.get
   let hp = response.data.stats[5].base_stat;
   console.log(response.data.stats[5].base_stat);
 
-  let Lapras= new Pokemon ("Lapras", abilities, defense, attack,hp);
-  console.log(Lapras);
-  Lapras.display();
-
+  let Bellossom= new Pokemon(abilities, defense, attack,hp, 2);
+  console.log(Bellossom);
+  let bellssomButton = document.getElementById('BellossomButton');
+  bellssomButton.addEventListener('click', Bellossom.display.bind(Bellossom));
 });
 
   axios.get
@@ -115,7 +105,76 @@ axios.get
     let hp = response.data.stats[5].base_stat;
     console.log(response.data.stats[5].base_stat);
 
-    let Luxio= new Pokemon ("Luxio", abilities, defense, attack,hp);
+    let Luxio= new Pokemon(abilities, defense, attack,hp, 3);
     console.log(Luxio);
-     Luxio.display();
-   });
+    let luxioButton = document.getElementById('LuxioButton');
+    luxioButton.addEventListener('click', Luxio.display.bind(Luxio));
+    // taneeya.pokemon.push(Lapras)
+
+});
+
+   // function laprasDisplay(){
+   //   document.getElementById("Abilities1").innerHTML = "Abilities: Hydration";
+   //   document.getElementById("Defense1").innerHTML = "Defense: 80";
+   //   document.getElementById("Attack1").innerHTML = "Attack: 85";
+   //   document.getElementById("Hp1").innerHTML = "Hp: 130";
+   // }
+
+
+   // function bellossomDisplay(){
+   //   document.getElementById("Abilities2").innerHTML = "Abilities: Healer ";
+   //   document.getElementById("Defense2").innerHTML = "Defense: 95";
+   //   document.getElementById("Attack2").innerHTML = "Attack: 80";
+   //   document.getElementById("Hp2").innerHTML = "Hp: 75";
+   // }
+   //
+   // function luxioDisplay(){
+   //   document.getElementById("Abilities3").innerHTML = "Abilities: guts";
+   //   document.getElementById("Defense3").innerHTML = "Defense: 49";
+   //   document.getElementById("Attack3").innerHTML = "Attack: 85";
+   //   document.getElementById("Hp3").innerHTML = "Hp: 60";
+   // }
+
+  //  class Trainer{
+  //    constructor(){
+  //      this.pokeInfo=[];
+  //  }
+  //
+  //
+  //  all(){
+  //    return this.pokeInfo;
+  //  }
+  //
+  //  add(info){
+  //   this.pokeInfo.push(info);
+  // }
+  //
+  //
+  //  get(pokemon){
+  // 
+  //  }
+
+// Kamran's code
+
+  // class Trainer{
+  //    constructor(){
+  //      this.pokeData=[];
+  //
+  //
+  //    }
+  //    all(){
+  //      return this.pokeData;
+  //    }
+  //    add(poke){
+  //      this.pokeData.push(poke);
+  //    }
+  //    get(name){
+  //      for(let i=0;i<this.pokeData.length;i++){
+  //        if(name === this.pokeData[i].name){
+  //        return this.pokeData[i];
+  //      }
+  //      }
+  //    }
+  //  }
+
+   // let taneeya = new Trainer()
