@@ -23,7 +23,7 @@ class Pokemon {
  }
 
 axios.get
-    ('http://fizal.me/pokeapi/api/v2/name/lapras.json')
+    ('https://fizal.me/pokeapi/api/v2/name/lapras.json')
       .then(function(response){
     // console.log(response.data);
 
@@ -49,12 +49,12 @@ axios.get
     console.log(Lapras);
     let laprasButton = document.getElementById('laprasButton');
     laprasButton.addEventListener('click', Lapras.display.bind(Lapras));
-    // taneeya.pokemon.push(Lapras)
+    taneeya.push(Lapras);
   });
 
 
 axios.get
-  ('http://fizal.me/pokeapi/api/v2/name/bellossom.json')
+  ('https://fizal.me/pokeapi/api/v2/name/bellossom.json')
     .then(function(response){
   // console.log(response.data);
 
@@ -80,10 +80,11 @@ axios.get
   console.log(Bellossom);
   let bellssomButton = document.getElementById('BellossomButton');
   bellssomButton.addEventListener('click', Bellossom.display.bind(Bellossom));
+  taneeya.add(Bellossom);
 });
 
   axios.get
-    ('http://fizal.me/pokeapi/api/v2/name/luxio.json')
+    ('https://fizal.me/pokeapi/api/v2/name/luxio.json')
       .then(function(response){
     // console.log(response.data);
 
@@ -109,7 +110,7 @@ axios.get
     console.log(Luxio);
     let luxioButton = document.getElementById('LuxioButton');
     luxioButton.addEventListener('click', Luxio.display.bind(Luxio));
-    // taneeya.pokemon.push(Lapras)
+    taneeya.add(Luxio);
 
 });
 
@@ -135,46 +136,26 @@ axios.get
    //   document.getElementById("Hp3").innerHTML = "Hp: 60";
    // }
 
-  //  class Trainer{
-  //    constructor(){
-  //      this.pokeInfo=[];
-  //  }
-  //
-  //
-  //  all(){
-  //    return this.pokeInfo;
-  //  }
-  //
-  //  add(info){
-  //   this.pokeInfo.push(info);
-  // }
-  //
-  //
-  //  get(pokemon){
-  // 
-  //  }
+   class Trainer{
+     constructor(){
+       this.pokeInfo=[];
+   }
+   all(){
+     return this.pokeInfo;
+   }
+   add(info){
+    this.pokeInfo.push(info);
+  }
+    get(name){
+      for(let i=0;i<this.pokeInfo.length;i++){
+             if(name === this.pokeInfo[i].name){
+             return this.pokeInfo[i];
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
-// Kamran's code
-
-  // class Trainer{
-  //    constructor(){
-  //      this.pokeData=[];
-  //
-  //
-  //    }
-  //    all(){
-  //      return this.pokeData;
-  //    }
-  //    add(poke){
-  //      this.pokeData.push(poke);
-  //    }
-  //    get(name){
-  //      for(let i=0;i<this.pokeData.length;i++){
-  //        if(name === this.pokeData[i].name){
-  //        return this.pokeData[i];
-  //      }
-  //      }
-  //    }
-  //  }
-
-   // let taneeya = new Trainer()
+   let taneeya = new Trainer();
