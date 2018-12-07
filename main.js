@@ -154,8 +154,5 @@ axios.get
           }
         }
       }
-    }
-  }
-}
 
    let taneeya = new Trainer();
